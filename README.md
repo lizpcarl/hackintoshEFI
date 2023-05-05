@@ -143,6 +143,28 @@ sudo /Volumes/HP\ x796w/12.6.1/Install\ macOS\ Monterey.app/Contents/Resources/c
 From 《How to Create a macOS Ventura Installation USB》(https://www.tonymacx86.com/threads/how-to-create-a-macos-ventura-installation-usb.320675/)
 
 
+https://www.tonymacx86.com/threads/how-to-create-a-macos-monterey-public-beta-installation-usb.313754/
+
+1. Insert the USB drive
+2. Open /Applications/Utilities/Disk Utility
+3. Highlight the USB drive in left column
+4. Click on the Partition tab
+5. Click Current and choose 1 Partition
+6. Click Options...
+7. Choose GUID Partition Table
+8. Under Name: type USB (You can rename it later)
+9. Under Format: choose Mac OS Extended (Journaled)
+10. Click Apply then Partition
+11. Open /Applications/Utilities/Terminal
+
+```
+sudo /Applications/Install\ macOS\ Monterey.app/Contents/Resources/createinstallmedia --volume /Volumes/USB /Applications/Install\ macOS\ Monterey.app --nointeraction
+```
+在本机环境下最终执行的是如下指令。
+```
+sudo /Volumes/HP\ x796w/12.6.1/Install\ macOS\ Monterey.app/Contents/Resources/createinstallmedia --volume /Volumes/USB /Volumes/HP\ x796w/12.6.1/Install\ macOS\ Monterey.app --nointeraction
+```
+
 
 
 ---
